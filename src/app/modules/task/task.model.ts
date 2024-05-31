@@ -32,4 +32,4 @@ const taskSchema = new Schema<TTask>({
   },
 });
 
-export const Task = model<TTask>("task", taskSchema);
+export const TaskModel = model<TTask>("task", taskSchema);

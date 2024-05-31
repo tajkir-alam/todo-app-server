@@ -9,7 +9,7 @@ const taskValidationSchema = z.object({
       invalid_type_error: "Description must be string",
     }),
     status: z.enum(["completed", "in-completed"]),
-    deadLines: z.date(),
+    deadLines: z.string(),
     priority: z.enum(["low", "medium", "high"]),
   }),
 });
