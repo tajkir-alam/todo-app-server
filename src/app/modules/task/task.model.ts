@@ -12,6 +12,10 @@ const taskSchema = new Schema<TTask>({
   },
   status: {
     type: String,
+    enum: {
+      values: ["completed", "in-completed"],
+      message: "You have to select completed or in-completed",
+    },
     required: true,
   },
   deadLines: {
@@ -20,6 +24,10 @@ const taskSchema = new Schema<TTask>({
   },
   priority: {
     type: String,
+    enum: {
+      values: ["low", "medium", "high"],
+      message: "You have select low or medium or either high",
+    },
     required: true,
   },
 });
