@@ -24,7 +24,29 @@ const getTasks = catchAsync(async (req, res) => {
   });
 });
 
+const deleteTask = catchAsync(async (req, res) => {
+  const result = await TaskServices.deleteTaskFromDB(req.params.id);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Tasks deleted successfully",
+    data: result,
+  });
+});
+
+const updateTask = catchAsync(async (req, res) => {
+  const result = await TaskServices.updateTaskIntoDB(req.params.id, req.body);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Tasks deleted successfully",
+    data: result,
+  });
+});
+
 export const TaskControllers = {
   createTask,
   getTasks,
+  deleteTask,
+  updateTask,
 };

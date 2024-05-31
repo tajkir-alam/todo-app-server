@@ -13,4 +13,11 @@ router.post(
 
 router.get("/", TaskControllers.getTasks);
 
+router.delete("/:id", TaskControllers.deleteTask);
+
+router.patch(
+  "/:id",
+  TaskControllers.updateTask
+);
+
 export const TaskRoutes = router;
