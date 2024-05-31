@@ -4,7 +4,7 @@ import sendResponse from "../../utils/sendResponse";
 import { TaskServices } from "./task.service";
 
 const createTask = catchAsync(async (req, res) => {
-  const result = await TaskServices.createTasksIntoDB(req.body);
+  const result = await TaskServices.createTaskIntoDB(req.body);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -14,6 +14,17 @@ const createTask = catchAsync(async (req, res) => {
   });
 });
 
+const getTasks = catchAsync(async (req, res) => {
+  const result = await TaskServices.getTasksFromDB();
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Tasks fetched successfully",
+    data: result,
+  });
+});
+
 export const TaskControllers = {
   createTask,
+  getTasks,
 };
