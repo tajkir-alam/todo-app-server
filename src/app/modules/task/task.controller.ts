@@ -39,7 +39,7 @@ const updateTask = catchAsync(async (req, res) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: "Tasks deleted successfully",
+    message: "Task updated successfully",
     data: result,
   });
 });
