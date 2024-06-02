@@ -1,10 +1,10 @@
-# Express with Mongoose
+# To Do Backend
 
 This project is a backend application built with Node.js, Express, TypeScript, and Mongoose, and Zod for data validation. It includes APIs for managing tasks.
 
 ## Table of Contents
 
-- [Express with Mongoose](#express-with-mongoose)
+- [To Do Backend](#to-do-backend)
   - [Table of Contents](#table-of-contents)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
